@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/2048.css">
+    <title>Game-2048</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+</head>
+<style>
+  .fon {
+    font-family: Arial, sans-serif;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 4000px;
+    position: absolute;
+    z-index: -100;
+    width: 4020px;
+    background-color: #faf8ef;
+}
+</style>
+<body data-page="2048">
+    <div class="container container_none">
+        <main class="main">
+          <div class="image">
+            <img src="images/image-2048.svg" alt="image-2048">
+            <a href="/pages/Games/main.html" type="button" class="btn-close close"></a>
+            <h1>2048 Game</h1>
+          </div>
+          <ol class="list">
+            <li>1. Double Square</li>
+            <li>2. Collect Prize</li>
+            <li>3. Be a Leader</li>
+          </ol>
+          <button type="button" class="btn-play btn">PLAY</button>
+          <div class="overlay" style="display: none;">
+            <div class="fon"></div>
+            <div class="scoresbest"><div class="scoreuptext">Best</div><div class="score" id="bestscores">0 </div></div>
+            <div class="scoresnow" ><div class="scoreuptext">Score</div><div class="score" id="scores">0</div></div>
+            <div class="logo">2048</div>
+            <div id="game-container"></div>
+   
+
+          </div>
+        </main>
+    </div>
+
+    <script src="js/game-2048.js"></script>
+    <script src="js/2048script.js"></script>
+
+</body>
+</html>

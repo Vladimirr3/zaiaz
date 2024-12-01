@@ -1,0 +1,286 @@
+.container_none {
+  padding-inline: 0;
+}
+
+.header__main_modify {
+  .close-icon {
+    margin-left: auto;
+  }
+}
+
+.main {
+  height: 80vh;
+  position: relative;
+  padding: 10px;
+  background-color: var(--dark-grey);
+  border-radius: 15px;
+}
+
+.spins {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+:is(.spin-for-ton, .spin-for-stars) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+
+  background-color: var(--orange);
+  border-radius: 15px;
+}
+
+:is(.spin-for-ton__title, .spin-for-stars__title) {
+  font-size: 1rem;
+  font-weight: inherit;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+:is(.spin-for-ton__price, .spin-for-stars__price) {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  & img {
+    width: 20px;
+    height: 20px;
+  }
+
+  & span {
+    font-size: 0.875rem;
+  }
+
+  & a {
+    padding: 6px;
+    font-size: 0.5rem;
+    color: var(--orange);
+    background-color: #fff;
+    border-radius: 15px;
+  }
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container.checking {
+  justify-content: center;
+
+  & #spinButton {
+    height: 190px;
+    width: 210px;
+    gap: 30px;
+  }
+}
+
+#spinButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  /* right: 72px;
+  bottom: 3px; */
+  width: 160px;
+  height: 130px;
+  font-weight: inherit;
+  border: 1px solid #fff;
+  background-color: var(--orange);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50%;
+
+  & #start {
+    font-size: 17px;
+  }
+
+  & #remainder {
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+#winner {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+.triangle {
+  position: relative;
+  z-index: 4;
+  top: -38px;
+  width: 0;
+  height: 0;
+  transform: rotate(180deg);
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 40px solid #fff;
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 38px solid var(--orange);
+}
+
+.app {
+  position: relative;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow-y: hidden;
+}
+
+.app .scope {
+  max-width: 100%;
+  padding-block: 20px;
+}
+
+.app .scope .list {
+  position: relative;
+  display: inline-flex;
+  left: 0;
+  gap: 15px;
+  transform: translate3d(0, 0, 0);
+  list-style: none;
+  transition: 5s cubic-bezier(0.21, 0.53, 0.29, 0.99);
+}
+
+.list__item {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  background-color: var(--orange);
+
+  & p {
+    font-size: 30px;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+  }
+
+  & img {
+    width: 80%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transition: 0.3s ease;
+  }
+}
+
+.app .scope .list__item.active {
+  transform: scale(1.05);
+}
+
+.app .start {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate3d(-50%, 20px, 0);
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #eb5146;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 30px 0 rgba(255, 118, 118, 0.2);
+  cursor: pointer;
+}
+
+.app .start:hover {
+  opacity: 0.8;
+}
+
+.result-wrapper {
+  display: none;
+  min-height: 100%;
+}
+
+.content {
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & img {
+    height: 30px;
+  }
+
+  & span {
+    font-weight: 700;
+  }
+}
+
+.remainder {
+  min-width: 100%;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 20px 10px;
+  background-color: var(--orange);
+}
+
+.text:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.purchases {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.buy-spins {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.buy {
+  padding: 5px 10px;
+  color: var(--orange);
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+}
